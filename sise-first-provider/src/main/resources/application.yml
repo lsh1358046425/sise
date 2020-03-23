@@ -1,0 +1,21 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: first-provider
+
+eureka:
+  #客户端注册进eureka服务列表内
+  client:
+    service-url:
+      defaultZone: http://eureka.com:8761/eureka/
+  instance:
+    instance-id: sise-first-provider
+    prefer-ip-address: true
+
+info:
+  app.name: sise
+  company.name: www.lucien.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
