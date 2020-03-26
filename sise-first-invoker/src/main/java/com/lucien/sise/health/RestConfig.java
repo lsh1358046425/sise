@@ -1,4 +1,4 @@
-package com.lucien.sise.config;
+package com.lucien.sise.health;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

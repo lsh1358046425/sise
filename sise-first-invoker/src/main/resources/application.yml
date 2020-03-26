@@ -1,0 +1,8 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/

@@ -3,6 +3,7 @@ package com.lucien.sise;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author Lucien
@@ -12,8 +13,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
+@Configuration
 public class FirstProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(FirstProviderApplication.class,args);
+        SpringApplication.run(FirstProviderApplication.class, args);
     }
 }

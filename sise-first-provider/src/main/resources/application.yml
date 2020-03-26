@@ -1,3 +1,4 @@
+#此处可以在启动时给jvm指定参数 -Dserver.port=8081 改变端口号或者直接改这里就行，不必像老师那样复杂
 server:
   port: 8001
 
@@ -9,9 +10,10 @@ eureka:
   #客户端注册进eureka服务列表内
   client:
     service-url:
-      defaultZone: http://eureka.com:8761/eureka/
+      defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/
+    initial-instance-info-replication-interval-seconds: 10
   instance:
-    instance-id: sise-first-provider
+    instance-id: ${spring.application.name}:${server.port}
     prefer-ip-address: true
 
 info:
