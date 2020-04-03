@@ -5,7 +5,7 @@ import com.netflix.appinfo.InstanceInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EurekaServiceInstance;
+import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,7 +42,7 @@ public class FirstController {
             instances.addAll(discoveryClient.getInstances(service));
         }
         for (ServiceInstance instance : instances) {
-            EurekaServiceInstance eurekaServiceInstance= (EurekaServiceInstance) instance;
+            EurekaDiscoveryClient.EurekaServiceInstance eurekaServiceInstance= (EurekaDiscoveryClient.EurekaServiceInstance) instance;
             InstanceInfo info = eurekaServiceInstance.getInstanceInfo();
             System.out.println(info.getAppName()+"==="+info.getInstanceId()+"==="+info.getStatus());
         }

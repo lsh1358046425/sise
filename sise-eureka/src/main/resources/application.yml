@@ -1,4 +1,4 @@
 # 指定配置文件启动
 spring:
   profiles:
-    active: prod
+    active: dev

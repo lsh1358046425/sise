@@ -12,5 +12,8 @@ eureka:
     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     fetch-registry: false
     service-url:
-      defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/
+      #集群配置
+      #defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/
+      #单机
+      defaultZone: http://eureka.com:8761/eureka/
 

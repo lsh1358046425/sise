@@ -10,7 +10,10 @@ eureka:
   #客户端注册进eureka服务列表内
   client:
     service-url:
-      defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/
+      #集群配置
+      #defaultZone: http://slave1.eureka.com:8761/eureka/,http://slave2.eureka.com:8762/eureka/
+      #单机
+      defaultZone: http://eureka.com:8761/eureka/
     initial-instance-info-replication-interval-seconds: 10
   instance:
     instance-id: ${spring.application.name}:${server.port}
