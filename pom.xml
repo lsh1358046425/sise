@@ -15,6 +15,8 @@
         <module>sise-first-ribbon-server</module>
         <module>sise-first-ribbon-client</module>
         <module>sise-restTemplate-test</module>
+        <module>sise-rest-server</module>
+        <module>sise-feign-client</module>
     </modules>
 
     <packaging>pom</packaging>
