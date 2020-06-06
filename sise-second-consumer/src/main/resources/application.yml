@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: second-consumer
+  rabbitmq:
+    host: 192.168.56.254
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    stream:
+      bindings:
+        myInput:
+          group: groupB
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7000/eureka/

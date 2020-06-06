@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: provider
+  rabbitmq:
+    host: 192.168.56.254
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7000/eureka/
+
+
