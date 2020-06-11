@@ -14,7 +14,7 @@ spring:
     stream:
       bindings:
         myInput:
-          group: groupB
+          group: groupC
 
 eureka:
   instance:

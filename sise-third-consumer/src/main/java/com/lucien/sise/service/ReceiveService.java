@@ -12,4 +12,7 @@ import org.springframework.messaging.SubscribableChannel;
 public interface ReceiveService {
     @Input("myInput")
     SubscribableChannel myInput();
+
+    @Input("stu")
+    SubscribableChannel stu();
 }

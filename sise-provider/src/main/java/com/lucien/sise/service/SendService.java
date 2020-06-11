@@ -14,4 +14,7 @@ import org.springframework.stereotype.Service;
 public interface SendService {
     @Output("myInput")
     SubscribableChannel sendOrder();
+
+    @Output("stu")
+    SubscribableChannel sendStu();
 }
